@@ -5,7 +5,7 @@ library(stringr)
 
 url <- "http://licence.eru.cz/index.php?SelAdProcStatusId=%22Ud%C4%9Blen%C3%A1+licence%22"
 
-i <- seq(0, 35460, 30)
+i <- seq(0, 35520, 30)
 
 # stáhni všechny URL na detaily licence
 
@@ -23,6 +23,8 @@ for (i in i) {
 # zjisti stav (udělená, ve správním řízení, zamítnutá žádost, zaniklá, zastavené správní řízení, zrušená)
 
 stav <- character()
+i <- seq(0, 35520, 30)
+
 
 for (i in i) {
   stranka_vypisu <- read_html(paste0("http://licence.eru.cz/index.php?roff=", i))
